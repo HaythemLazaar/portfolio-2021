@@ -1,0 +1,21 @@
+.prj{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 3rem;
+}
+
+.prj-head{
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.projects{
+    text-align: end;
+    color: #8A8A8A;
+}
+
+.projects>p{
+    padding-block: 0.4rem;
+    font-size: 1.5rem;
+}
