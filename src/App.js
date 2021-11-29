@@ -1,36 +1,54 @@
-import logo from './logo.svg';
 import './App.css';
 import Layout from './components/Layout'
 import Hero from './components/Hero'
 import ProjectsNav from './components/ProjectsNav';
 import Contact from './components/Contact'
+import back from './images/back.svg'
 import {
   BrowserRouter as Router,
   Routes,
   Route,
   Link,
-  useRouteMatch,
-  useParams
+  useLocation
 } from "react-router-dom";
+import styled from 'styled-components'
+
+
 
 function App() {
+  let location = useLocation();
+
   return (
-    <div className="App">
+    <Router>
+      <div className="App">
+        <img src={back} />
+      <Routes>
+        <Route path="/" exact element={<Home />} />
+        <Route path="/contact" exact element={<Contact />} />
+      </Routes>
+      </div>
+    </Router>
+  );
+}
+
+const Home = () =>{
+  return(
+    <div>
       <Layout text="HELLO !" />
       <Hero />
       <ProjectsNav />
-      <Router>
-        <button className="cnt-btn">
-          <Link to="/contact">
-            Let's Chat !
-          </Link>
-          <Routes>
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </button>
-      </Router>
+      <Link to="/contact">
+        <button className="cnt-btn">Let's Chat !</button>
+      </Link>
     </div>
-  );
+  )
+}
+
+const Button = () => {
+  return(
+    styled.a`
+    
+    `)
 }
 
 export default App;

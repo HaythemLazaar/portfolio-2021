@@ -1,14 +1,14 @@
 import React from 'react'
 import './Contact.css'
-import {BrowserRouter as Router,
-        Link,
-        Routes        
-} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import Layout from './Layout'
 
 function Contact() {
     return (
-        <div>
-        </div>
+        <>
+        <Layout text="CONTACT" />
+        <div>THIS IS CONTACT</div>
+        </>
     )
 }
 
